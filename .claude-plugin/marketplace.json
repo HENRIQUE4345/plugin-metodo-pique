@@ -1,0 +1,12 @@
+{
+  "name": "metodo-pique-marketplace",
+  "owner": { "name": "Henrique Carvalho", "url": "https://github.com/HENRIQUE4345" },
+  "description": "Metodo de trabalho com Claude Code — trilho, rituais, inbox e estrutura de segundo cerebro. Generico e distribuivel.",
+  "plugins": [
+    {
+      "name": "metodo-pique",
+      "source": "./",
+      "description": "Metodo de trabalho com Claude Code — trilho, rituais, inbox e estrutura de cerebro. Generico e parametrizavel."
+    }
+  ]
+}

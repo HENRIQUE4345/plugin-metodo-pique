@@ -1,0 +1,8 @@
+node_modules/
+*.local.md
+.env
+.env.*
+__pycache__/
+*.pyc
+.DS_Store
+desktop.ini
