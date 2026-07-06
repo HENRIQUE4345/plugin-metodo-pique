@@ -1,6 +1,6 @@
 {
   "name": "metodo-pique",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Metodo de trabalho com Claude Code: trilho TAREFAS.md, rituais iniciar/encerrar, processamento de inbox, escolha de modelo e a estrutura de segundo cerebro em 5 pastas. Generico e parametrizavel — sem acoplamento a ferramentas de empresa.",
   "author": { "name": "Henrique Carvalho", "url": "https://github.com/HENRIQUE4345" },
   "keywords": ["metodo", "produtividade", "segundo-cerebro", "trilho", "tarefas", "rituais", "inbox", "modos-de-trabalho"],

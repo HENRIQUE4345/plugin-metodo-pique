@@ -7,6 +7,7 @@ Um método de trabalho com o **Claude Code**, empacotado como plugin. Genérico 
 ## O que vem no pacote
 
 **Comandos:**
+- `/metodo-pique:setup` — configura um segundo cérebro novo do zero: faz perguntas, instancia a estrutura (que vem dentro do plugin), personaliza tudo e não deixa lixo de setup. Roda uma vez.
 - `/metodo-pique:iniciar` — puxa o próximo item do `HOJE` no `TAREFAS.md`, carimba o início e carrega o modo de trabalho do item.
 - `/metodo-pique:encerrar` — no fim da conversa, varre o que foi discutido e distribui pros lugares certos do cérebro; fecha o item do trilho e loga o feito. Roda sozinho, tudo local e reversível por git.
 - `/metodo-pique:inbox` — processa o inbox (DIARIO + REVISAO + contextos), gera um `PLANO.md` pra você revisar e, após confirmação, executa e deixa o inbox vazio.
@@ -40,12 +41,22 @@ claude --plugin-dir /caminho/para/plugin-metodo-pique
 claude plugin validate ./plugin-metodo-pique
 ```
 
-## Como começar (do zero)
+## Como começar
 
-1. Instale o plugin.
-2. Se você **já tem** um cérebro em markdown: copie `templates/TAREFAS.template.md` pra raiz dele como `TAREFAS.md` (preencha `{NOME}` e a legenda de modos), e cole as 2 seções de `templates/CLAUDE-metodo.md` no seu `CLAUDE.md`.
-3. Se você **não tem** cérebro ainda: copie `templates/cerebro-scaffold/` pra uma pasta nova, troque os `{NOME}`/placeholders, e `git init`.
-4. No dia a dia: `/metodo-pique:iniciar` pra abrir um item · trabalhe no modo carregado · `/metodo-pique:encerrar` pra fechar · `/metodo-pique:inbox` no fim do dia.
+**Se você NÃO tem um cérebro ainda (o caminho recomendado):**
+1. Instale o plugin (acima).
+2. Crie uma pasta vazia pro seu cérebro e abra ela no Claude Code.
+3. Rode `/metodo-pique:setup` — ele faz umas perguntas, monta a estrutura inteira (a partir do molde que vem dentro do plugin), personaliza tudo pra você e não deixa nenhum arquivo de setup sobrando.
+4. No dia a dia: joga tudo em `inbox/DIARIO.md` · `/metodo-pique:inbox` pra processar · `/metodo-pique:iniciar` pra abrir um item do trilho · trabalhe no modo carregado · `/metodo-pique:encerrar` pra fechar.
+
+**Se você JÁ tem um cérebro em markdown:** copie `templates/TAREFAS.template.md` pra raiz dele como `TAREFAS.md` (preencha `{NOME}` e a legenda de modos) e cole as 2 seções de `templates/CLAUDE-metodo.md` no seu `CLAUDE.md`. Pronto — os comandos passam a operar sobre ele.
+
+## As duas camadas (como pensar nisso)
+
+- **O plugin é a ferramenta** — instala uma vez na máquina, serve todos os cérebros que você tiver. Você não trabalha "dentro" dele.
+- **O cérebro é o espaço de trabalho** — um repositório markdown seu, onde você vive o dia a dia. Nasce do `/setup`.
+
+Quando o método evolui, você atualiza o plugin (`/plugin`) e todos os cérebros recebem os comandos novos — sem tocar no conteúdo pessoal de ninguém.
 
 ## Os modos (o coração do método)
 
