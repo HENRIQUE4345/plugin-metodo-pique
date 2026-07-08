@@ -12,9 +12,11 @@ Um método de trabalho com o **Claude Code**, empacotado como plugin. Genérico 
 - `/metodo-pique:encerrar` — no fim da conversa, varre o que foi discutido e distribui pros lugares certos do cérebro; fecha o item do trilho e loga o feito. Roda sozinho, tudo local e reversível por git.
 - `/metodo-pique:inbox` — processa o inbox (DIARIO + REVISAO + contextos), gera um `PLANO.md` pra você revisar e, após confirmação, executa e deixa o inbox vazio.
 - `/metodo-pique:modelo` — recomenda modelo + effort ideal pra uma tarefa (framework A/B/C).
+- `/metodo-pique:cascata` — roteiro guiado que constrói a **estratégia da sua empresa**, do propósito ao objetivo de cada setor. Multi-sessão, uma camada por vez, o número sempre por último. A saída alimenta o `## SEMANA` do seu trilho — estratégia que vira foco do dia, não doc morto.
 
-**Skill:**
+**Skills:**
 - `metodo` — conhecimento auto-invocado sobre os modos (Pensar/Produzir/Afiar), o trilho, o ciclo do dia/semana e a estrutura de cérebro. Ativa quando você fala de foco/tarefas — ou quando diz que está travado.
+- `cascata` — o vocabulário da cascata estratégica: as 8 camadas (propósito → Norte → alvo do ano → SWOT → objetivo do trimestre → indicador → iniciativa → tarefa), a regra de ouro (o número por último) e os 3 testes de um bom indicador. Ativa quando você fala de propósito, Norte, meta, objetivo, OKR, indicador ou "pra onde a empresa vai".
 
 **Templates** (`templates/`):
 - `TAREFAS.template.md` — o trilho vazio, parametrizável.

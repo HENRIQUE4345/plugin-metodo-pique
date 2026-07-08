@@ -3,6 +3,33 @@
 O metodo evolui com o tempo. Este arquivo e o trilho do proprio plugin: o que ja
 entrega, o que vem, e o que ficou de fora de proposito (com o porque).
 
+## Feito — v1.2.0 (2026-07-07)
+
+A **camada estrategica** que faltava acima do dia/semana. A cascata desce do proposito
+ate o objetivo de cada setor e alimenta o `## SEMANA` do trilho — o topo que ate agora
+o metodo nao cobria.
+
+- **Comando:** `cascata` — roteiro guiado, multi-sessao, que conduz uma dona de empresa
+  (leiga, nao precisa ser dev) pelas 8 camadas: Proposito -> Norte -> Meta anual -> SWOT
+  -> Objetivo do trimestre -> Indicador -> Iniciativa -> Tarefa. Uma camada por vez, o
+  numero sempre por ultimo, PARA e espera em cada. Retoma de onde parou lendo um cabecalho
+  de estado maquina-legivel no doc.
+- **Skill:** `cascata` (auto-invoca) — o vocabulario fechado + as 8 camadas + a regra de
+  ouro + os 3 testes do indicador + projeto/processo + arqueologia de proposito/Norte.
+  Fonte unica das definicoes (o comando referencia, nao duplica).
+- **Template:** `cascata.template.md` — esqueleto magro com cabecalho de estado e as 8
+  camadas travadas (destravam em ordem). Vira `estrategia/cascata.md` no cerebro da pessoa.
+- **Anti-morte embutido:** a saida (objetivos+indicadores) ancora no `## SEMANA` do
+  TAREFAS.md — estrategia que alimenta o ritual diario nao morre na gaveta.
+
+> ⚠️ **A camada de SETOR e v0.9 — desenhada, nao validada em ciclo real.** As camadas de
+> cima (Proposito -> objetivo do trimestre) ja foram rodadas ponta-a-ponta na pratica; a
+> descida empresa->setor foi desenhada mas nunca fechou um exemplo completo. Por isso o
+> comando a conduz com mais cautela, gera UM exemplo piloto antes de replicar, e a admite
+> como piloto a revisar. **Promover a v1.0 da camada de setor quando um primeiro caso real
+> rodar setor ponta-a-ponta.** (Bate com "nao investigado != refutado; nao cravar
+> capacidade nao-testada".)
+
 ## Feito — v1.1.0 (2026-07-06)
 
 - **Comandos:** `iniciar`, `encerrar`, `inbox`, `modelo`, `setup`.
